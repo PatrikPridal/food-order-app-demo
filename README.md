@@ -1,4 +1,4 @@
-# food-order-app-demo
+# ReacMeals
 Practice App for ordering food in React.
 
 # Getting Started with Create React App
