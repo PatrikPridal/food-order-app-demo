@@ -15,7 +15,7 @@ const CartProvider = props => {
     };
 
 
-    return <CartContext.Provider>
+    return <CartContext.Provider value={cartContext}>
         {props.children}
     </CartContext.Provider>
 };
