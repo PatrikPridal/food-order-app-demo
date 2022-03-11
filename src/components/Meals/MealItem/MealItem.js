@@ -5,6 +5,8 @@ import classes from "./MealItem.module.css";
 const MealItem = (props) => {
   const price = `$${props.price.toFixed(2)}`;
 
+  const addToHandler = amount => {}; // received props from submitHandler in MealItemForm
+
   return (
     <li className={classes.meal}>
       <div>
