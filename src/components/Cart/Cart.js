@@ -11,10 +11,23 @@ const Cart = (props) => {
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
   const hasItems = cartCtx.items.length > 0;
 
+  const cartItemRemoveHandler = id => {};
+
+  const cartItemAddHandler = item => {};
+
   const cartItems = (
     <ul className={classes["cart-items"]}>
       {cartCtx.items.map((item) => (
-        <CartItem key={item.id} name={item.name} amount={item.amount} price={item.price} />
+        <CartItem
+          key={item.id}
+          name={item.name}
+          amount={item.amount}
+          price={item.price}
+          onRemove={cartItemRemoveHandler.bind(null, item.id)}
+          onAdd={cartItemAddHandler.bind(null, item)}
+          // bind is preconfigure some function for future execution and basically /n
+          // alows you to preconfigure the argument that fucntion will recieve when it's been executed
+        />
       ))}
     </ul>
   );
@@ -30,7 +43,7 @@ const Cart = (props) => {
         <button className={classes["button--alt"]} onClick={props.onClose}>
           Close
         </button>
-        {hasItems && <button className={classes.button}>Order</button>} 
+        {hasItems && <button className={classes.button}>Order</button>}
       </div>
     </Modal>
   );
