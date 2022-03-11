@@ -27,11 +27,11 @@ const CartProvider = (props) => {
   ); //in destructuring array is first state snapshot, second function which allows you dispatch an action to the reducer
 
   const addItemToCartHandler = (item) => {
-    dispatchCartAction({ type: "ADD_ITEM", item: item });
+    dispatchCartAction({type: "ADD_ITEM", item: item});
   };
 
   const removeItemFromCartHandler = (id) => {
-    dispatchCartAction({ type: "REMOVE_ITEM", id: id });
+    dispatchCartAction({type: "REMOVE_ITEM", id: id});
   };
 
   const cartContext = {
