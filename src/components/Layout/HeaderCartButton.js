@@ -24,9 +24,13 @@ const HeaderCartButton = (props) => {
     setBtnIsHiglighted(true); // every add into cart setting bump classes on btn on
 
     //timeout for 300ms (as long that effect is) then set that effect to false
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setBtnIsHiglighted(false);
     }, 300);
+
+    return () => { // returning function for cleanup Timeout
+      clearTimeout(timer);
+    };
   }, [items]); //dependencies -> [items]
 
   // passing "numberOfCartItems into span for number of cart items in it"
