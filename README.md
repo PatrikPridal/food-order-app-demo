@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/98656826/157729757-87bfd76f-6497-4820-9b99-ac8f9e082a4d.png)
+![image](https://user-images.githubusercontent.com/98656826/157899892-09c4fd7c-ccac-47d4-a82c-d37c5a1694b5.png)
 
 # ReactMeals
 Practice App for ordering food in React.
